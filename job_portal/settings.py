@@ -60,3 +60,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # WhiteNoiseでの静的ファイル配信設定
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+SUPABASE_URL = "https://ryxveuvpzjmkynykcass.supabase.co"
+SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ5eHZldXZwempta3lueWtjYXNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM3MTcyMDAsImV4cCI6MjA0OTI5MzIwMH0.NhwizsYCoqcRBWlHYi0w4wN8ttc5GczwCzpl8wayq38"
