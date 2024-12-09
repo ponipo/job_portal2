@@ -1,0 +1,36 @@
+<!-- templates/jobs/job_list.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>求人一覧</title>
+    {% load static %} <!-- ここを追加 -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>求人一覧</h1>
+    </header>
+    <main>
+        <form method="get" class="search-form">
+            <input type="text" name="q" value="{{ query }}" placeholder="キーワード検索">
+            <button type="submit">検索</button>
+        </form>
+        <ul class="job-list">
+            {% for job in jobs %}
+                <li class="job-item">
+                    <h2>{{ job.title }}</h2>
+                    <p>{{ job.brief_description }}</p>
+                    <a href="{% url 'job_detail' job.id %}" class="detail-button">詳細を見る</a>
+                </li>
+            {% empty %}
+                <li>該当する求人はありません。</li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Company</p>
+    </footer>
+</body>
+</html>

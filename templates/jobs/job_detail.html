@@ -1,0 +1,31 @@
+<!-- templates/jobs/job_detail.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ job.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ job.title }}</h1>
+    </header>
+    <main>
+        <p>{{ job.full_description|linebreaksbr }}</p>
+
+        <!-- 連絡先情報を表示 -->
+        <section class="contact-info">
+            <h2>連絡先情報</h2>
+            <p>Email: <a href="mailto:{{ job.contact_email }}">{{ job.contact_email }}</a></p>
+        </section>
+
+        <!-- 戻るボタン -->
+        <a href="{% url 'job_list' %}" class="back-button">求人一覧に戻る</a>
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Company</p>
+    </footer>
+</body>
+</html>
