@@ -71,6 +71,6 @@ STATIC_URL = '/static/'
 # 静的ファイルのディレクトリ（必要に応じて）
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
-# 警告対応：STATICFILES_DIRSで指定したディレクトリが存在するか確認
-# 存在しない場合は、staticフォルダを作成するか、以下の行をコメントアウト
-# STATICFILES_DIRS = [BASE_DIR / 'static']
+# SupabaseのURLとキー設定
+SUPABASE_URL = "https://ryxveuvpzjmkynykcass.supabase.co"
+SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ5eHZldXZwempta3lueWtjYXNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM3MTcyMDAsImV4cCI6MjA0OTI5MzIwMH0.NhwizsYCoqcRBWlHYi0w4wN8ttc5GczwCzpl8wayq38"  # 必ずあなたのAnonキーに置き換えてください
