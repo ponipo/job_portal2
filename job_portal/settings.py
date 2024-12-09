@@ -12,7 +12,8 @@ SECRET_KEY = 'your-secret-key'
 # デバッグモード
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['job-portal2-yax9.onrender.com']
+
 
 # アプリケーション定義
 INSTALLED_APPS = [
